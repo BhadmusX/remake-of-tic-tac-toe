@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(232, 232, 232);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:px;
+    font-weight: 700;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px;
+    box-sizing: border-box;
+    max-width: 350px;
+    height: 100Vh;
+    max-height: 550px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.grid-container{
+display: grid;
+grid-template-columns: repeat(3, minmax(90px, 1fr));
+grid-template-rows: repeat(3, minmax(90px, 1fr));
+ width: clamp(280px, 45vw, 290px);
+  height: clamp(280px, 45vw, 290px);
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+.square{
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
+    background-color: rgb(232, 232, 232);
+    border: 2px solid rgb(219, 219, 219);  
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.square:hover{
+    background-color: rgb(247, 246, 246);
+}
+.input{
+    display: flex;
+    gap: 10px;
+}
+input{
+    height: clamp(30px, 3vw, 45px );
+    width: clamp(100px, 20vw, 130px);
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 5px 5px;
+}
+input::placeholder{
+    padding: 1px;
+     font-size: 16px;
+    font-weight: 700;
+}
+input:active{
+    border: 3px solid rgb(216, 216, 216);
+    outline: none;
+}
+.start{
+    height: clamp(35px, 3vw, 45px );
+    width: clamp(150px, 3vw, 200px );
+    border: none;
+    background-color: rgb(5, 5, 50);
+    color: white;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.start:hover{
+    background-color: rgb(3, 3, 97);
+}
+.start:hover{
+   border: 2px solid black; 
+}
+.reset{
+   height: clamp(35px, 3vw, 45px );
+    width: clamp(150px, 3vw, 200px );
+    background-color: rgb(5, 5, 50);
+    color: white;
+    border-radius: 7px;
+    border: none;
+     font-size: 16px;
+    font-weight: 700;
+}
+.reset:hover{
+     background-color: rgb(3, 3, 97);
+}
+.reset:active{
+    border: 2px solid black;
+}
+.playagain{
+      height: clamp(35px, 3vw, 45px );
+    width: clamp(150px, 3vw, 200px );
+    background-color: rgb(5, 5, 50);
+    color: white;
+    border-radius: 7px;
+    border: none;
+     font-size: 16px;
+    font-weight: 700;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+dialog {
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    border: none;
+}
+.dialog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
