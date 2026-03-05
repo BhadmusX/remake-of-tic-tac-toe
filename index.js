@@ -4,6 +4,7 @@ const result = document.querySelector(".results");
 const dialog = document.querySelector("dialog");
 const player1name = document.querySelector(".player1name");
 const player2name = document.querySelector(".player2name");
+const turn = document.querySelector(".result")
 
 let player1;
 let player2;
@@ -84,7 +85,7 @@ let activeplayer;
     }
         if(gameBoard.getBoard()[index] === ""){
             const success = gameBoard.placeMark(index, gameController.getactiveplayer().marker)
-            console.log(`marking cell ${index} for ${gameController.getactiveplayer().name}..`);
+            turn.textContent = `marking cell ${index} for ${gameController.getactiveplayer().name}..`;
 
             if(success){
                let currentBoard = gameBoard.getBoard();
@@ -140,7 +141,15 @@ const displayController = (function () {
         squares.forEach((square) => {
         const squareindex = square.dataset.index;
         const valueInArray = gameBoard.getBoard()[squareindex];
-        square.textContent = valueInArray;  
+        square.textContent = valueInArray;
+
+         square.classList.remove("x-player", "o-player");
+        
+        if(valueInArray === "X") {
+            square.classList.add("x-player");
+        } else if(valueInArray === "O") {
+            square.classList.add("o-player");
+        }  
         });
     };
     squares.forEach((square) => {

@@ -35,6 +35,8 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 .grid-container{
 display: grid;
@@ -61,6 +63,16 @@ grid-template-rows: repeat(3, minmax(90px, 1fr));
 }
 .square:hover{
     background-color: rgb(247, 246, 246);
+}
+.x-player{
+    color: rgb(4, 4, 74);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+.o-player{
+    color: red;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 .input{
     display: flex;
@@ -113,6 +125,13 @@ input:active{
 }
 .reset:active{
     border: 2px solid black;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }
 .playagain{
       height: clamp(35px, 3vw, 45px );
